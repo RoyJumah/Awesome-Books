@@ -1,7 +1,7 @@
 let library = [];
 
-const temp = document.querySelector(".book");
-const bookshelf = document.querySelector("#bookshelf");
+const temp = document.querySelector('.book');
+const bookshelf = document.querySelector('#bookshelf');
 let idBook = library.length;
 function Book(title, author) {
   this.id = idBook;
@@ -11,9 +11,10 @@ function Book(title, author) {
 }
 function ReloadLibrary() {
   library = JSON.parse(localStorage.library);
-  bookshelf.innerHTML = "";
+  bookshelf.innerHTML = '';
   bookshelf.appendChild(temp);
   for (let i = 0; i < library.length; i += 1) {
+    // eslint-disable-next-line no-use-before-define
     DisplayBook(library[i]);
   }
 }
@@ -27,27 +28,27 @@ function SaveBook(title, author) {
   ReloadLibrary();
 }
 
-function AddBook() {
+document.getElementById('addBtn').addEventListener('click', (event) => {
   event.preventDefault();
   const formAddBook = document.forms.AddBook;
   const bookData = new FormData(formAddBook);
-  const bookTitle = bookData.get("title");
-  const bookAuthor = bookData.get("author");
+  const bookTitle = bookData.get('title');
+  const bookAuthor = bookData.get('author');
   formAddBook.reset();
   SaveBook(bookTitle, bookAuthor);
-}
+});
 
-function removeBook(id) {
+function DeleteBook(id) {
   library = library.filter((book) => book.id !== id);
   localStorage.library = JSON.stringify(library);
   ReloadLibrary();
 }
 function DisplayBook(book) {
   const clon = temp.content.cloneNode(true);
-  clon.querySelectorAll("p")[0].innerHTML = "BOOK NAME: " + book.title;
-  clon.querySelectorAll("p")[1].innerHTML = "AUTHOR NAME: " + book.author;
-  clon.querySelector("button").addEventListener("click", () => {
-    removeBook(book.id);
+  clon.querySelectorAll('p')[0].innerHTML = `BOOK NAME: ${book.title}`;
+  clon.querySelectorAll('p')[1].innerHTML = `AUTHOR NAME: ${book.author}`;
+  clon.querySelector('button').addEventListener('click', () => {
+    DeleteBook(book.id);
   });
   bookshelf.appendChild(clon);
 }
