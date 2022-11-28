@@ -9,7 +9,23 @@ function Book(title, author) {
   this.author = author;
   idBook += 1;
 }
-
+function ReloadLibrary() {
+    library = JSON.parse(localStorage.library);
+    bookshelf.innerHTML = "";
+    bookshelf.appendChild(temp);
+    for (let i = 0; i < library.length; i += 1) {
+      DisplayBook(library[i]);
+    }
+  }
+  function SaveBook(title, author) {
+    const book = new Book(title, author);
+    if (!Array.isArray(library)) {
+      library = [];
+    }
+    library.push(book);
+    localStorage.library = JSON.stringify(library);
+    ReloadLibrary();
+  }
 
 function AddBook() {
   event.preventDefault();
