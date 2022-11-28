@@ -10,22 +10,22 @@ function Book(title, author) {
   idBook += 1;
 }
 function ReloadLibrary() {
-    library = JSON.parse(localStorage.library);
-    bookshelf.innerHTML = "";
-    bookshelf.appendChild(temp);
-    for (let i = 0; i < library.length; i += 1) {
-      DisplayBook(library[i]);
-    }
+  library = JSON.parse(localStorage.library);
+  bookshelf.innerHTML = "";
+  bookshelf.appendChild(temp);
+  for (let i = 0; i < library.length; i += 1) {
+    DisplayBook(library[i]);
   }
-  function SaveBook(title, author) {
-    const book = new Book(title, author);
-    if (!Array.isArray(library)) {
-      library = [];
-    }
-    library.push(book);
-    localStorage.library = JSON.stringify(library);
-    ReloadLibrary();
+}
+function SaveBook(title, author) {
+  const book = new Book(title, author);
+  if (!Array.isArray(library)) {
+    library = [];
   }
+  library.push(book);
+  localStorage.library = JSON.stringify(library);
+  ReloadLibrary();
+}
 
 function AddBook() {
   event.preventDefault();
@@ -37,7 +37,7 @@ function AddBook() {
   SaveBook(bookTitle, bookAuthor);
 }
 
-function DeleteBook(id) {
+function removeBook(id) {
   library = library.filter((book) => book.id !== id);
   localStorage.library = JSON.stringify(library);
   ReloadLibrary();
@@ -47,7 +47,7 @@ function DisplayBook(book) {
   clon.querySelectorAll("p")[0].innerHTML = "BOOK NAME: " + book.title;
   clon.querySelectorAll("p")[1].innerHTML = "AUTHOR NAME: " + book.author;
   clon.querySelector("button").addEventListener("click", () => {
-    DeleteBook(book.id);
+    removeBook(book.id);
   });
   bookshelf.appendChild(clon);
 }
