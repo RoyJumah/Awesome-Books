@@ -24,11 +24,23 @@
     <div>
       <div>
         <div>
-          <form method="POST" action="submit" id="AddBook">
-            <input type="text" name="title" placeholder="Title" required="" />
+          <form id="form">
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Title"
+              required=""
+            />
             <br />
             <br />
-            <input type="text" name="author" placeholder="Author" required="" />
+            <input
+              type="text"
+              id="author"
+              name="author"
+              placeholder="Author"
+              required=""
+            />
             <br />
             <br />
             <button id="addBtn" type="submit">Add book</button>
@@ -36,6 +48,6 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>
