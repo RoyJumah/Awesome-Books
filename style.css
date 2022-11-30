@@ -7,6 +7,54 @@
   font-family: 'poppins', sans-serif;
 }
 
+header {
+  width: 100%;
+  margin-top: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  /* position: fixed; */
+  /* padding: 30px; */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+}
+
+.header-text {
+  padding: 30px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.nav-list {
+  display: flex;
+  padding-right: 30px;
+  gap: 30px;
+}
+
+.nav-list li {
+  list-style: none;
+}
+
+.nav-list li a {
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000;
+}
+
+.date-and-time {
+  width: auto;
+  padding-top: 30px;
+}
+
+#current-date {
+  float: right;
+  padding-right: 30px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -29,7 +77,7 @@
   width: 100%;
 }
 
-ul {
+.unorderedList {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,15 +86,15 @@ ul {
   gap: 30px;
 }
 
-ul li {
+.unorderedList li {
   list-style: none;
 }
 
-#bookshelf ul:nth-child(odd) {
+#bookshelf .unorderedList:nth-child(odd) {
   background-color: rgb(235, 231, 231);
 }
 
-#bookshelf ul:nth-child(even) {
+#bookshelf .unorderedList:nth-child(even) {
   background-color: #fff;
 }
 
@@ -98,4 +146,24 @@ span {
   background-color: #fff;
   color: #000;
   box-shadow: 0 2px 2px 1px #000;
+}
+
+.contact-header {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.contact-details {
+  padding-top: 15px;
+}
+
+footer {
+  width: 100%;
+  padding: 30px;
+  background-color: rgba(128, 128, 128, 0.894);
+}
+
+footer i {
+  padding-left: 50px;
+  color: #fff;
 }
