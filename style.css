@@ -21,20 +21,12 @@
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-} 
+}
 
 #bookshelf {
   display: flex;
   flex-direction: column;
   width: 100%;
-}
-
-#bookshelf ul:nth-child(odd) {
-  background-color: rgb(235, 231, 231);
-}
-
-#bookshelf ul:nth-child(even) {
-  background-color: #fff;
 }
 
 ul {
@@ -48,6 +40,14 @@ ul {
 
 ul li {
   list-style: none;
+}
+
+#bookshelf ul:nth-child(odd) {
+  background-color: rgb(235, 231, 231);
+}
+
+#bookshelf ul:nth-child(even) {
+  background-color: #fff;
 }
 
 .delete {

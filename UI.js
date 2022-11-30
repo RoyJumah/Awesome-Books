@@ -13,6 +13,7 @@ export default class UI {
     `;
     bookshelf.appendChild(ul);
   }
+
   static removeBook(element) {
     if (element.classList.contains('delete')) {
       element.parentElement.remove();
@@ -21,9 +22,8 @@ export default class UI {
 
   static displayBooks() {
     const books = Bookstore.getBooks();
-    books.forEach(book => {
+    books.forEach((book) => {
       UI.addBook(book);
     });
   }
 }
-
