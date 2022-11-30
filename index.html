@@ -9,33 +9,53 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
-      <h1>Awesome Books</h1>
-      <div id="bookshelf">
-        <template class="book">
-          <p>Book Title</p>
-          <p>Book Author</p>
-          <button>Remove</button>
-          <hr />
-        </template>
-      </div>
-    </div>
-    <br />
-    <div>
-      <div>
-        <div>
-          <form method="POST" action="submit" id="AddBook">
-            <input type="text" name="title" placeholder="Title" required="" />
-            <br />
-            <br />
-            <input type="text" name="author" placeholder="Author" required="" />
-            <br />
-            <br />
-            <button id="addBtn" type="submit">Add book</button>
-          </form>
+    <main class="container">
+      <h3 class="header">All awesome books</h3>
+      <div class="display">
+        <div id="bookshelf">
+          <!-- <template class="book">
+            <p>Book Title</p>
+            <p>Book Author</p>
+            <button>Remove</button>
+            <hr />
+          </template> -->
         </div>
       </div>
-    </div>
-    <script src="script.js"></script>
+      <br />
+      
+      <hr class="line">
+
+      <h3 class="header">Add a new book</h3>
+
+      <div>
+        <div>
+          <div>
+            <form id="form">
+              <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Title"
+                required=""
+              />
+              <br />
+              <!-- <br /> -->
+              <input
+                type="text"
+                id="author"
+                name="author"
+                placeholder="Author"
+                required=""
+              />
+              <br />
+              <!-- <br /> -->
+              <button id="addBtn" type="submit">Add book</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+ 
+    <script type="module" src="index.js"></script>
   </body>
 </html>
