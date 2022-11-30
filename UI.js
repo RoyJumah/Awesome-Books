@@ -5,9 +5,10 @@ export default class UI {
     const bookshelf = document.getElementById('bookshelf');
     const ul = document.createElement('ul');
     ul.innerHTML = `
-    <li>${book.title}</li>
+    <span>
+    <li>"${book.title}" by</li>
     <li>${book.author}</li>
-
+    </span>
     <button class ="delete" type = "button">Remove</button>
     `;
     bookshelf.appendChild(ul);
@@ -25,3 +26,4 @@ export default class UI {
     });
   }
 }
+
