@@ -4,7 +4,7 @@ import Bookstore from './Bookstore.js';
 
 const form = document.getElementById('form');
 
-form.addEventListener('submit', event => {
+form.addEventListener('submit', (event) => {
   event.preventDefault();
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
@@ -20,6 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   UI.displayBooks();
 });
 
-document.getElementById('bookshelf').addEventListener('click', event => {
+document.getElementById('bookshelf').addEventListener('click', (event) => {
   UI.removeBook(event.target);
 });
