@@ -4,6 +4,7 @@ export default class UI {
   static addBook(book) {
     const bookshelf = document.getElementById('bookshelf');
     const ul = document.createElement('ul');
+    ul.classList.add('unorderedList')
     ul.innerHTML = `
     <span>
     <li>"${book.title}" by</li>
