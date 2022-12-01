@@ -21,11 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.getElementById('bookshelf').addEventListener('click', (event) => {
-  const title = event.target.previousElementSibling.previousElementSibling.textContent.replace(
-    /[^a-z0-9]/gi,
-    '',
-  );
-
-  Bookstore.removeBook(title);
   UI.removeBook(event.target);
+  Bookstore.removeBook(
+    event.target.previousElementSibling.previousElementSibling.textContent,
+  );
 });
