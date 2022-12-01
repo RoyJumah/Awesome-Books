@@ -4,13 +4,11 @@ export default class UI {
   static addBook(book) {
     const bookshelf = document.getElementById('bookshelf');
     const ul = document.createElement('ul');
-    ul.classList.add('unorderedList')
+    ul.classList.add('unorderedList');
     ul.innerHTML = `
-    <span>
-    <li>"${book.title}" by</li>
-    <li>${book.author}</li>
-    </span>
-    <button class ="delete" type = "button">Remove</button>
+    <li>"${book.title}"</li>
+    <li> by ${book.author}</li>
+    <button class="delete">Remove</button>
     `;
     bookshelf.appendChild(ul);
   }
@@ -23,7 +21,7 @@ export default class UI {
 
   static displayBooks() {
     const books = Bookstore.getBooks();
-    books.forEach((book) => {
+    books.forEach(book => {
       UI.addBook(book);
     });
   }

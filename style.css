@@ -158,12 +158,24 @@ span {
 }
 
 footer {
-  width: 100%;
-  padding: 30px;
-  background-color: rgba(128, 128, 128, 0.894);
+  background-color: #fff;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  border: 1px solid #000;
+  width: 650px;
+  margin: 0 730px 35px 730px;
+  padding: 24px;
 }
 
 footer i {
   padding-left: 50px;
-  color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+.container-wrapper {
+  margin: 0 auto;
+  width: 600px;
 }

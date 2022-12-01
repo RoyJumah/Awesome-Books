@@ -4,7 +4,7 @@ import Bookstore from './Bookstore.js';
 
 const form = document.getElementById('form');
 
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', event => {
   event.preventDefault();
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
@@ -20,6 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
   UI.displayBooks();
 });
 
-document.getElementById('bookshelf').addEventListener('click', (event) => {
+document.getElementById('bookshelf').addEventListener('click', event => {
+  const title =
+    event.target.previousElementSibling.previousElementSibling.textContent.replace(
+      /[^a-z0-9]/gi,
+      ''
+    );
+  console.log(title);
+  Bookstore.removeBook(title);
   UI.removeBook(event.target);
 });
