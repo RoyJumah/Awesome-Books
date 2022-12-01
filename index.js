@@ -22,4 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.getElementById('bookshelf').addEventListener('click', (event) => {
   UI.removeBook(event.target);
+  Bookstore.removeBook(
+    event.target.previousElementSibling.previousElementSibling.textContent,
+  );
 });

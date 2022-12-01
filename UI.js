@@ -4,13 +4,12 @@ export default class UI {
   static addBook(book) {
     const bookshelf = document.getElementById('bookshelf');
     const ul = document.createElement('ul');
+    ul.classList.add('unorderedList');
     ul.innerHTML = `
-    <span>
-    <li>"${book.title}" by</li>
-    <li>${book.author}</li>
-    </span>
-    <button class ="delete" type = "button">Remove</button>
-    `;
+    <p class="bookTitle"><b>${book.title}</b></p>
+        <p>by${book.author}.</b></p>
+        <button class="delete">Remove</button>
+        `;
     bookshelf.appendChild(ul);
   }
 

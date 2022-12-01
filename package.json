@@ -2,7 +2,7 @@
   "name": "awesome-books",
   "version": "1.0.0",
   "description": "<a name=\"readme-top\"></a>",
-  "main": "script.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

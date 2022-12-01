@@ -9,26 +9,42 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="container">
-      <h3 class="header">All awesome books</h3>
-      <div class="display">
-        <div id="bookshelf">
-          <!-- <template class="book">
-            <p>Book Title</p>
-            <p>Book Author</p>
-            <button>Remove</button>
-            <hr />
-          </template> -->
-        </div>
+    <div class="container-wrapper">
+      <header>
+        <nav>
+          <!-- <span class="header-div"> -->
+          <h1 class="header-text">Awesome Book</h1>
+          <!-- </span> -->
+          <!-- <span class="navigation"> -->
+          <ul class="nav-list">
+            <li class="nav-link list"><a href="#" id="list-link">List</a></li>
+            <li class="nav-link add-new">
+              <a href="#" id="new-link">Add New</a>
+            </li>
+            <li class="nav-link ccontact">
+              <a href="#" id="contact-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="date-and-time">
+        <p id="current-date">position for date & time!</p>
       </div>
-      <br />
-      
-      <hr class="line">
 
-      <h3 class="header">Add a new book</h3>
+      <main class="container">
+        <section id="display-books">
+          <h3 class="header">All awesome books</h3>
 
-      <div>
-        <div>
+          <div id="bookshelf"></div>
+        </section>
+
+        <br />
+
+        <!-- <hr class="line"> -->
+
+        <!-- <div> -->
+        <section id="form-input">
+          <h3 class="header">Add a new book</h3>
           <div>
             <form id="form">
               <input
@@ -52,10 +68,29 @@
               <button id="addBtn" type="submit">Add book</button>
             </form>
           </div>
-        </div>
-      </div>
-    </main>
- 
+        </section>
+        <!-- </div> -->
+
+        <section id="our-contact">
+          <h3 class="contact-header">Contact Information</h3>
+          <div class="contact-details">
+            <p>
+              Do you have any question or you just want to say "Hello"?<br />You
+              can reach out to us!
+            </p>
+            <ul>
+              <li>Our email: mail@awesome.books</li>
+              <li>Our Phone number: +2548035184236</li>
+              <li>Our Address: Plot 60 Fidelity Drive, Nairobi, Kenya.</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <i>&copy; 2022 Awesome Book. Developed by Roy & Lugard</i>
+      </footer>
+    </div>
+    <script src="single-page.js"></script>
     <script type="module" src="index.js"></script>
   </body>
 </html>
