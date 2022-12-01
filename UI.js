@@ -21,7 +21,7 @@ export default class UI {
 
   static displayBooks() {
     const books = Bookstore.getBooks();
-    books.forEach((book) => {
+    books.forEach(book => {
       UI.addBook(book);
     });
   }

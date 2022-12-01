@@ -10,11 +10,8 @@
 header {
   width: 100%;
   margin-top: 0;
+
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-
-  /* position: fixed; */
-
-  /* padding: 30px; */
 }
 
 nav {
@@ -55,6 +52,7 @@ nav {
 #current-date {
   float: right;
   padding-right: 30px;
+  font-size: 18px;
 }
 
 .container {
@@ -70,6 +68,7 @@ nav {
 .header {
   text-align: center;
   padding-top: 20px;
+  font-size: 24px;
   padding-bottom: 20px;
 }
 
@@ -153,21 +152,23 @@ span {
 .contact-header {
   text-align: center;
   padding-top: 30px;
+  font-size: 24px;
 }
 
 .contact-details {
   padding-top: 15px;
+  font-size: 18px;
 }
 
 footer {
   background-color: #fff;
   text-align: center;
+  position: fixed;
+  border: 1px solid #000;
+  width: 100%;
   bottom: 0;
   left: 0;
-  position: absolute;
-  border: 1px solid #000;
-  width: 650px;
-  margin: 0 730px 35px 730px;
+  right: 0;
   padding: 24px;
 }
 
@@ -175,9 +176,4 @@ footer i {
   padding-left: 50px;
   color: #000;
   font-weight: bold;
-}
-
-.container-wrapper {
-  margin: 0 auto;
-  width: 600px;
 }
