@@ -1,3 +1,4 @@
+const contactInfo = document.getElementById('our-contact');
 const currentDate = new Date().toLocaleString();
 document.getElementById('current-date').innerHTML = currentDate;
 
@@ -28,8 +29,8 @@ addNewBtn.addEventListener('click', () => {
 });
 
 // display the  Contact section when click the button "Contact"
+
 const contactBtn = document.getElementById('contact-link');
-const contactInfo = document.getElementById('our-contact');
 
 contactBtn.addEventListener('click', () => {
   bookList.style.display = 'none';
