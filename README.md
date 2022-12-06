@@ -57,33 +57,22 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Awesome-Books <a name="about-project"></a>
+# 📖 Webpack-boilerplate <a name="about-project"></a>
 
-> Awesome-Books is a project created using HTML, CSS and Javascript and enables a user to add and remove a book from a list
+> This is a small practise project that aims to put into practise lessons on how to setup a project with webpack
 
 ## 🛠 Built With <a name="built-with"></a>
 - HTML
 - CSS
 - Javascript
 
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](https://royjumah.github.io/Awesome-Books/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
-
-## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
-
 ### Prerequisites
-
+- HTML
+- CSS 
+- Javascript
 
 In order to run this project you need:
 - Visual Studio Code or amy other equivalent code editor
@@ -112,11 +101,6 @@ Example command:
 - Twitter: [@_royissues](https://twitter.com/_royissues)
 - LinkedIn: [@roy_jumah](https://www.linkedin.com/in/roy-jumah/)
 
-👤 **Lugard Agu**
-
-- GitHub: [@Lugard Agu](https://github.com/lugard1)
-- Twitter: [@_lugardagu](https://twitter.com/Dsn3kings)
-- LinkedIn: [@lugard_agu](https://www.linkedin.com/in/lugard-agu-45bb05b6)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
